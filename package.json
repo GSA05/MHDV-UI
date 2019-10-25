@@ -1,0 +1,8 @@
+{
+  "name": "MHDV-UI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/GSA05/MHDV-UI.git",
+  "author": "PotatoTeam",
+  "license": "MIT"
+}
