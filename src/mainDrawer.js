@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
@@ -6,8 +7,8 @@ import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import ShowChartIcon from "@material-ui/icons/ShowChart";
+import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
 
 const drawerWidth = 240;
 
@@ -49,25 +50,25 @@ export default function PermanentDrawerLeft() {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
+        <Link href="/chart">
+          <ListItem button key="chart">
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              <ShowChartIcon />
             </ListItemIcon>
-            <ListItemText primary={text} />
+            <ListItemText primary="График" />
           </ListItem>
-        ))}
+        </Link>
       </List>
       <Divider />
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
+        <Link href="/game">
+          <ListItem button key="game">
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              <VideogameAssetIcon />
             </ListItemIcon>
-            <ListItemText primary={text} />
+            <ListItemText primary="Игра" />
           </ListItem>
-        ))}
+        </Link>
       </List>
     </Drawer>
   );
