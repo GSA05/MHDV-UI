@@ -5,7 +5,7 @@ import Layout from "material-ui-layout";
 
 import MainAppBar from "./mainAppBar";
 // import MainFooter from "./mainFooter";
-// import MainDrawer from "./mainDrawer";
+import MainDrawer from "./mainDrawer";
 
 class AppLayout extends React.Component {
   render() {
@@ -21,9 +21,9 @@ class AppLayout extends React.Component {
         // footerContent={<MainFooter />} // If no content it will render null
         // footerProps={/* props to the Footer wrapper component eg. color, className */}
 
-        // leftDrawerUnder // default false
-        // leftDrawerContent={<MainDrawer />} // If no content it will render null
-        // leftDrawerType="permanent" // default temporary
+        leftDrawerUnder // default false
+        leftDrawerContent={<MainDrawer />} // If no content it will render null
+        leftDrawerType="permanent" // default temporary
 
         // For state control the layout can either be controlled from the outside using e.g. Redux
         // or internally managed. If it is not specified, then it will be self managed.
